@@ -31,16 +31,19 @@
 #include <sstream>
 
 #include <wchar.h>
+
+#if defined(PODOFO_HAVE_FREETYPE)
 #include <ft2build.h>
 #include FT_FREETYPE_H
 #include FT_TRUETYPE_TABLES_H
+#endif
 
 #define PODOFO_FIRST_READABLE 31
 #define PODOFO_WIDTH_CACHE_SIZE 256
 
 namespace PoDoFo {
 
-#if defined(__APPLE_CC__) && !defined(PODOFO_HAVE_FONTCONFIG)
+#if defined(__APPLE_CC__) && !defined(PODOFO_HAVE_FONTCONFIG) && defined(MAC_OS_X)
 #include <Carbon/Carbon.h>
 #endif
 PdfFontMetrics::PdfFontMetrics( EPdfFontType eFontType, const char* pszFilename, const char* pszSubsetPrefix )
@@ -81,7 +84,7 @@ PdfFontMetrics::~PdfFontMetrics()
 {
 }
 
-#if defined(__APPLE_CC__) && !defined(PODOFO_HAVE_FONTCONFIG)
+#if defined(__APPLE_CC__) && !defined(PODOFO_HAVE_FONTCONFIG) && defined(PODOFO_HAVE_FREETYPE)
 FT_Error
 My_FT_GetFile_From_Mac_ATS_Name( const char*  fontName,
 								 FSSpec*  pathSpec, FT_Long*     face_index )

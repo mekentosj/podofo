@@ -29,7 +29,9 @@
 #include "PdfDifferenceEncoding.h"
 #include "PdfFont.h"
 #include "PdfFontFactory.h"
+
 #include "PdfFontMetricsFreetype.h"
+
 #include "PdfFontMetricsBase14.h"
 #include "PdfFontTTFSubset.h"
 #include "PdfFontType1.h"
@@ -140,12 +142,12 @@ PdfFontCache::PdfFontCache( PdfVecObjects* pParent )
         Util::PdfMutexWrapper mutex(m_FcMutex);
         m_pFcConfig     = static_cast<void*>(FcInitLoadConfigAndFonts());
     }
-#endif
-
+#else
     if( FT_Init_FreeType( &m_ftLibrary ) )
     {
         PODOFO_RAISE_ERROR( ePdfError_FreeType );
     }
+#endif
 }
 
 PdfFontCache::~PdfFontCache()
@@ -157,13 +159,14 @@ PdfFontCache::~PdfFontCache()
         Util::PdfMutexWrapper mutex(m_FcMutex);
         FcConfigDestroy( static_cast<FcConfig*>(m_pFcConfig) );
     }
-#endif
+#else
 
     if( m_ftLibrary ) 
     {
         FT_Done_FreeType( m_ftLibrary );
         m_ftLibrary = NULL;
     }
+#endif
 }
 
 void PdfFontCache::EmptyCache() 

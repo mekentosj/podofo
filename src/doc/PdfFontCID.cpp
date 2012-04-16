@@ -454,7 +454,6 @@ void PdfFontCID::CreateCMap( PdfObject* pUnicode ) const
     pUnicode->GetStream()->EndAppend();
 }
 
-
 /*
     // Get the string in UTF-16be format
     PdfString    sStr = rsString.ToUnicode();

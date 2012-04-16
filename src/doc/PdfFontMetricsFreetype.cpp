@@ -40,7 +40,7 @@
 
 namespace PoDoFo {
 
-#if defined(__APPLE_CC__) && !defined(PODOFO_HAVE_FONTCONFIG)
+#if defined(__APPLE_CC__) && !defined(PODOFO_HAVE_FONTCONFIG) && defined(MAC_OS_X)
 #include <Carbon/Carbon.h>
 #endif
 

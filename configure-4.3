@@ -1,0 +1,25 @@
+#! /bin/bash
+unset CPATH
+unset C_INCLUDE_PATH
+unset CPLUS_INCLUDE_PATH
+unset OBJC_INCLUDE_PATH
+unset LIBS
+unset DYLD_FALLBACK_LIBRARY_PATH
+unset DYLD_FALLBACK_FRAMEWORK_PATH
+
+export SDKVER="4.3"
+export DEVROOT="/Developer/Platforms/iPhoneOS.platform/Developer"
+export SDKROOT="$DEVROOT/SDKs/iPhoneOS$SDKVER.sdk"
+export PKG_CONFIG_PATH="$SDKROOT/usr/lib/pkgconfig"
+export PKG_CONFIG_LIBDIR="$PKG_CONFIG_PATH"
+export MAINFOLDER=`pwd`
+
+cd build >/dev/null 2>&1 && cmake VERBOSE=1 -DVERBOSE=1 -V -G "Unix Makefiles" .. \
+-DPODOFO_HAVE_FREETYPE:BOOL=YES \
+-DPODOFO_NO_MULTITHREAD:BOOL=NO \
+-DPODOFO_BUILD_LIB_ONLY:BOOL=YES \
+-DCMAKE_INCLUDE_PATH="${SDKROOT}/usr/include" \
+-DCMAKE_LIBRARY_PATH="${SDKROOT}/usr/lib" \
+-DCMAKE_TOOLCHAIN_FILE="$MAINFOLDER/tools/share/cmake/iphone-$SDKVER.toolchain" \
+-DCMAKE_INSTALL_PREFIX="/opt/iphone-$SDKVER" \
+"$@"
