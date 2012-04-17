@@ -23,6 +23,8 @@
 
 #include "podofo/base/PdfDefines.h"
 #include "podofo/base/PdfRect.h"
+
+#if defined(PODOFO_HAVE_FREETYPE)
 #include "PdfFontMetricsBase14.h"
 
 /*
@@ -4609,5 +4611,6 @@ static   PdfFontMetricsBase14   PODOFO_BUILTIN_FONTS[] = {
 };
 
 };
+#endif // PDF_HAVE_FREETYPE
 
 #endif // _PDF_FONT_FACTORY_BASE14_DATA_H_
