@@ -265,13 +265,22 @@ class PODOFO_API PdfVecObjects {
      */
     void RenumberObjects( PdfObject* pTrailer, TPdfReferenceSet* pNotDelete = NULL, bool bDoGarbageCollection = false );
 
-    /** Insert a object into this vector.
-     *  Overwritten from std::vector so that 
-     *  m_bObjectCount can be increased for each object.
+    /** 
+     * \see insert_sorted
+     *
+     * Simple forward to insert sorted, as PdfVecObjects is always sorted.
+     */
+    void push_back( PdfObject* pObj );
+
+    /** Insert an object into this vector so that
+     *  the vector remains sorted w.r.t. 
+     *  the ordering based on object and generation numbers
+     *  m_bObjectCount will be increased for the object.
      * 
      *  \param pObj pointer to the object you want to insert
      */
-    void push_back( PdfObject* pObj );
+    void insert_sorted( PdfObject *pObj );
+    
 
     /** 
      * Sort the objects in the vector based on their object and generation numbers
@@ -386,6 +395,13 @@ class PODOFO_API PdfVecObjects {
      */
     void CollectGarbage( PdfObject* pTrailer );
 
+	/** Get next unique subset-prefix
+     *
+     *  \returns a string to use as subset-prefix.
+     */
+	std::string GetNextSubsetPrefix();
+
+
  private:    
     /** 
      * \returns the next free object reference
@@ -433,6 +449,8 @@ class PODOFO_API PdfVecObjects {
     PdfDocument*        m_pDocument;
 
     StreamFactory*      m_pStreamFactory;
+
+	std::string			m_sSubsetPrefix;		 ///< Prefix for BaseFont and FontName of subsetted font
 };
 
 

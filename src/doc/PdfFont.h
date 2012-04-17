@@ -35,8 +35,8 @@ class PdfWriter;
 
 
 
-/** Before you can draw text on a PDF document, you have to create 
- *  a font object first. You can reuse this font object as often 
+/** Before you can draw text on a PDF document, you have to create
+ *  a font object first. You can reuse this font object as often
  *  as you want.
  *
  *  Use PdfDocument::CreateFont to create a new font object.
@@ -56,20 +56,22 @@ class PODOFO_DOC_API PdfFont : public PdfElement {
      *  The font has a default font size of 12.0pt.
      *
      *  \param pMetrics pointer to a font metrics object. The font in the PDF
-     *         file will match this fontmetrics object. The metrics object is 
+     *         file will match this fontmetrics object. The metrics object is
      *         deleted along with the font.
-     *  \param pEncoding the encoding of this font. The font will not take ownership of this object.
+     *  \param pEncoding the encoding of this font. The font will take ownership of this object
+     *                   depending on pEncoding->IsAutoDelete()
      *  \param pParent parent of the font object
-     *  
+     *
      */
     PdfFont( PdfFontMetrics* pMetrics, const PdfEncoding* const pEncoding, PdfVecObjects* pParent );
 
 
     /** Create a PdfFont based on an existing PdfObject
      *  \param pMetrics pointer to a font metrics object. The font in the PDF
-     *         file will match this fontmetrics object. The metrics object is 
+     *         file will match this fontmetrics object. The metrics object is
      *         deleted along with the font.
-     *  \param pEncoding the encoding of this font. The font will not take ownership of this object.
+     *  \param pEncoding the encoding of this font. The font will take ownership of this object
+     *                   depending on pEncoding->IsAutoDelete()
      *  \param pObject an existing PdfObject
      */
     PdfFont( PdfFontMetrics* pMetrics, const PdfEncoding* const pEncoding, PdfObject* pObject );
@@ -106,6 +108,16 @@ class PODOFO_DOC_API PdfFont : public PdfElement {
      */
     inline float GetFontCharSpace() const;
 
+    /** Set the word spacing of the font
+     *  \param fWordSpace word spacing in PDF units
+     */
+    inline void SetWordSpace( float fWordSpace );
+
+    /** Retrieve the current word spacing of this font object
+     *  \returns the current font word spacing in PDF units
+     */
+    inline float GetWordSpace() const;
+
     /** Set the underlined property of the font
      *  \param bUnder if true any text drawn with this font
      *                by a PdfPainter will be underlined.
@@ -124,24 +136,24 @@ class PODOFO_DOC_API PdfFont : public PdfElement {
      *  \see IsUnderlined
      */
     inline bool IsBold() const;
-    
+
     /** \returns true if this font is italic
      *  \see IsBold
      *  \see IsUnderlined
      */
     inline bool IsItalic() const;
-    
+
     /** Set the strikeout property of the font
      *  \param bStrikeOut if true any text drawn with this font
      *                    by a PdfPainter will be strikedout.
      *  Default is false
      */
     inline void SetStrikeOut( bool bStrikeOut );
-    
+
     /** \returns true if the font is striked out
      */
     inline bool IsStrikeOut() const;
-    
+
     /** Returns the identifier of this font how it is known
      *  in the pages resource dictionary.
      *  \returns PdfName containing the identifier (e.g. /Ft13)
@@ -168,7 +180,7 @@ class PODOFO_DOC_API PdfFont : public PdfElement {
      */
     inline PdfFontMetrics* GetFontMetrics2();
 
-    /** Write a PdfString to a PdfStream in a format so that it can 
+    /** Write a PdfString to a PdfStream in a format so that it can
      *  be used with this font.
      *  This is used by PdfPainter::DrawText to display a text string.
      *  The following PDF operator will be Tj
@@ -185,22 +197,22 @@ class PODOFO_DOC_API PdfFont : public PdfElement {
      */
     virtual void EmbedFont();
 
-	/** Remember the glyphs used in the string in case of subsetting 
-	 *
+    /** Remember the glyphs used in the string in case of subsetting
+     *
      *  \param sText the text string which should be printed (is not allowed to be NULL!)
      *  \param lStringLen draw only lLen characters of pszText
      *
      *  Only call if IsSubsetting() returns true. Might throw an exception otherwise.
      *
      *  \see IsSubsetting
-	 */
-	virtual void AddUsedSubsettingGlyphs( const PdfString & sText, long lStringLen );
+     */
+    virtual void AddUsedSubsettingGlyphs( const PdfString & sText, long lStringLen );
 
-  	/** Remember the glyphname in case of subsetting 
-	 *
+    /** Remember the glyphname in case of subsetting
+     *
      *  \param pszGlyphName Name of the glyph to remember
-	 */
-	virtual void AddUsedGlyphname( const char * pszGlyphName );
+     */
+    virtual void AddUsedGlyphname( const char * pszGlyphName );
 
     /** Embeds pending subset-font into PDF page
      *  Only call if IsSubsetting() returns true. Might throw an exception otherwise.
@@ -221,7 +233,7 @@ class PODOFO_DOC_API PdfFont : public PdfElement {
      */
     inline const PdfName& GetBaseFont() const;
 
-	void InitBase14Font();
+    void InitBase14Font();
 
 
     const PdfEncoding* const m_pEncoding;
@@ -233,8 +245,8 @@ class PODOFO_DOC_API PdfFont : public PdfElement {
     bool  m_bStrikedOut;
 
     bool  m_bWasEmbedded;
-	bool m_isBase14;
-	bool m_bIsSubsetting;
+    bool m_isBase14;
+    bool m_bIsSubsetting;
     PdfName m_Identifier;
 
  private:
@@ -257,7 +269,7 @@ class PODOFO_DOC_API PdfFont : public PdfElement {
      *
      *  \see IsBold
      *
-     *  This can be called by PdfFontFactory to tell this font 
+     *  This can be called by PdfFontFactory to tell this font
      *  object that it belongs to a bold font.
      */
     inline void SetBold( bool bBold );
@@ -267,19 +279,19 @@ class PODOFO_DOC_API PdfFont : public PdfElement {
      *
      *  \see IsItalc
      *
-     *  This can be called by PdfFontFactory to tell this font 
+     *  This can be called by PdfFontFactory to tell this font
      *  object that it belongs to an italic font.
      */
     inline void SetItalic( bool bItalic );
 
-	
+
     PdfName m_BaseFont;
 };
 
 PdfFont* CreateBase14Font(const char* pszFontName, const PdfEncoding * const pEncoding,PdfVecObjects *pvecObjects);
 
 // -----------------------------------------------------
-// 
+//
 // -----------------------------------------------------
 void PdfFont::SetBold( bool bBold )
 {
@@ -287,7 +299,7 @@ void PdfFont::SetBold( bool bBold )
 }
 
 // -----------------------------------------------------
-// 
+//
 // -----------------------------------------------------
 void PdfFont::SetItalic( bool bItalic )
 {
@@ -295,7 +307,7 @@ void PdfFont::SetItalic( bool bItalic )
 }
 
 // -----------------------------------------------------
-// 
+//
 // -----------------------------------------------------
 const PdfName& PdfFont::GetBaseFont() const
 {
@@ -303,7 +315,7 @@ const PdfName& PdfFont::GetBaseFont() const
 }
 
 // -----------------------------------------------------
-// 
+//
 // -----------------------------------------------------
 const PdfName & PdfFont::GetIdentifier() const
 {
@@ -311,7 +323,7 @@ const PdfName & PdfFont::GetIdentifier() const
 }
 
 // -----------------------------------------------------
-// 
+//
 // -----------------------------------------------------
 void PdfFont::SetFontSize( float fSize )
 {
@@ -319,7 +331,7 @@ void PdfFont::SetFontSize( float fSize )
 }
 
 // -----------------------------------------------------
-// 
+//
 // -----------------------------------------------------
 float PdfFont::GetFontSize() const
 {
@@ -327,7 +339,7 @@ float PdfFont::GetFontSize() const
 }
 
 // -----------------------------------------------------
-// 
+//
 // -----------------------------------------------------
 void PdfFont::SetFontScale( float fScale )
 {
@@ -335,7 +347,7 @@ void PdfFont::SetFontScale( float fScale )
 }
 
 // -----------------------------------------------------
-// 
+//
 // -----------------------------------------------------
 float PdfFont::GetFontScale() const
 {
@@ -343,7 +355,7 @@ float PdfFont::GetFontScale() const
 }
 
 // -----------------------------------------------------
-// 
+//
 // -----------------------------------------------------
 void PdfFont::SetFontCharSpace( float fCharSpace )
 {
@@ -351,7 +363,7 @@ void PdfFont::SetFontCharSpace( float fCharSpace )
 }
 
 // -----------------------------------------------------
-// 
+//
 // -----------------------------------------------------
 float PdfFont::GetFontCharSpace() const
 {
@@ -359,7 +371,23 @@ float PdfFont::GetFontCharSpace() const
 }
 
 // -----------------------------------------------------
-// 
+//
+// -----------------------------------------------------
+inline void PdfFont::SetWordSpace( float fWordSpace )
+{
+    m_pMetrics->SetWordSpace( fWordSpace );
+}
+
+// -----------------------------------------------------
+//
+// -----------------------------------------------------
+inline float PdfFont::GetWordSpace() const
+{
+    return m_pMetrics->GetWordSpace();
+}
+
+// -----------------------------------------------------
+//
 // -----------------------------------------------------
 const PdfEncoding* PdfFont::GetEncoding() const
 {
@@ -368,7 +396,7 @@ const PdfEncoding* PdfFont::GetEncoding() const
 }
 
 // -----------------------------------------------------
-// 
+//
 // -----------------------------------------------------
 PdfFontMetrics* PdfFont::GetFontMetrics2()
 {
@@ -376,7 +404,7 @@ PdfFontMetrics* PdfFont::GetFontMetrics2()
 }
 
 // -----------------------------------------------------
-// 
+//
 // -----------------------------------------------------
 const PdfFontMetrics* PdfFont::GetFontMetrics() const
 {
@@ -384,7 +412,7 @@ const PdfFontMetrics* PdfFont::GetFontMetrics() const
 }
 
 // -----------------------------------------------------
-// 
+//
 // -----------------------------------------------------
 void PdfFont::SetUnderlined( bool bUnder )
 {
@@ -392,7 +420,7 @@ void PdfFont::SetUnderlined( bool bUnder )
 }
 
 // -----------------------------------------------------
-// 
+//
 // -----------------------------------------------------
 bool PdfFont::IsUnderlined() const
 {
@@ -400,7 +428,7 @@ bool PdfFont::IsUnderlined() const
 }
 
 // -----------------------------------------------------
-// 
+//
 // -----------------------------------------------------
 void PdfFont::SetStrikeOut( bool bStrikeOut )
 {
@@ -408,7 +436,7 @@ void PdfFont::SetStrikeOut( bool bStrikeOut )
 }
 
 // -----------------------------------------------------
-// 
+//
 // -----------------------------------------------------
 bool PdfFont::IsStrikeOut() const
 {
@@ -416,23 +444,23 @@ bool PdfFont::IsStrikeOut() const
 }
 
 // -----------------------------------------------------
-// 
+//
 // -----------------------------------------------------
 bool PdfFont::IsBold() const
 {
-	return m_bBold;
+    return m_bBold;
 }
 
 // -----------------------------------------------------
-// 
+//
 // -----------------------------------------------------
 bool PdfFont::IsItalic() const
 {
-	return m_bItalic;
+    return m_bItalic;
 }
 
 // -----------------------------------------------------
-// 
+//
 // -----------------------------------------------------
 bool PdfFont::IsSubsetting() const
 {

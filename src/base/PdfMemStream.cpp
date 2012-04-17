@@ -51,6 +51,7 @@ PdfMemStream::~PdfMemStream()
 void PdfMemStream::BeginAppendImpl( const TVecFilters & vecFilters )
 {
     m_buffer  = PdfRefCountedBuffer();
+	m_lLength = 0;
 
     if( vecFilters.size() )
     {
@@ -74,7 +75,7 @@ void PdfMemStream::EndAppendImpl()
         m_pStream->Close();
 
         if( !m_pBufferStream ) 
-            m_lLength += dynamic_cast<PdfBufferOutputStream*>(m_pStream)->GetLength();
+            m_lLength = dynamic_cast<PdfBufferOutputStream*>(m_pStream)->GetLength();
 
         delete m_pStream;
         m_pStream = NULL;
@@ -83,7 +84,7 @@ void PdfMemStream::EndAppendImpl()
     if( m_pBufferStream ) 
     {
         m_pBufferStream->Close();
-        m_lLength += m_pBufferStream->GetLength();
+        m_lLength = m_pBufferStream->GetLength();
         delete m_pBufferStream;
         m_pBufferStream = NULL;
     }
@@ -267,6 +268,7 @@ void PdfMemStream::Write( PdfOutputDevice* pDevice, PdfEncrypt* pEncrypt )
         pdf_long nOffset = pEncrypt->CalculateStreamOffset();
 
         char *pOutputBuffer = new char[nOutputLen+1];
+        memset(pOutputBuffer, 0, nOffset);
         memcpy(&pOutputBuffer[nOffset], pBuffer, lLen);
 
         pEncrypt->Encrypt( reinterpret_cast<unsigned char*>(pOutputBuffer), lLen );

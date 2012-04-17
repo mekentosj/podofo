@@ -68,6 +68,7 @@ SET(PODOFO_DOC_SOURCES
   doc/PdfFileSpec.cpp
   doc/PdfFontCache.cpp
   doc/PdfFontCID.cpp
+  doc/PdfFontConfigWrapper.cpp
   doc/PdfFont.cpp
   doc/PdfFontFactory.cpp
   doc/PdfFontMetricsBase14.cpp
@@ -98,6 +99,7 @@ SET(PODOFO_DOC_SOURCES
   doc/PdfStreamedDocument.cpp
   doc/PdfTable.cpp
   doc/PdfXObject.cpp
+  doc/PdfCMapEncoding.cpp
   )
 
 IF(WIN32)
@@ -185,6 +187,7 @@ SET(PODOFO_DOC_HEADERS
   doc/PdfFileSpec.h
   doc/PdfFontCache.h
   doc/PdfFontCID.h
+  doc/PdfFontConfigWrapper.h
   doc/PdfFontFactoryBase14Data.h
   doc/PdfFontFactory.h
   doc/PdfFont.h
@@ -216,6 +219,7 @@ SET(PODOFO_DOC_HEADERS
   doc/PdfStreamedDocument.h
   doc/PdfTable.h
   doc/PdfXObject.h
+  doc/PdfCMapEncoding.h
   )
 
 # Create a Source Group for Visual Studio

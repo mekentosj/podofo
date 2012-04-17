@@ -74,7 +74,7 @@ PdfFontMetricsObject::PdfFontMetricsObject( PdfObject* pFont, PdfObject* pDescri
 		m_nFirst = 0;
 		m_nLast = 0;
 
-		m_dDefWidth = pFont->GetDictionary().GetKeyAsLong( "DW", 1000L );
+		m_dDefWidth = static_cast<double>(pFont->GetDictionary().GetKeyAsLong( "DW", 1000L ));
 		PdfVariant default_width(m_dDefWidth);
 		PdfObject * pw = pFont->GetIndirectKey( "W" );
 
@@ -168,28 +168,40 @@ double PdfFontMetricsObject::CharWidth( unsigned char c ) const
 
 double PdfFontMetricsObject::UnicodeCharWidth( unsigned short c ) const
 {
-    // TODO
-    return 0.0;
+    if( c >= m_nFirst && c <= m_nLast
+        && c - m_nFirst < static_cast<int>(m_width.GetSize()) )
+    {
+        double dWidth = m_width[c - m_nFirst].GetReal();
+
+        return dWidth * static_cast<double>(this->GetFontSize() * this->GetFontScale() / 100.0) / 1000.0 +
+            static_cast<double>( this->GetFontSize() * this->GetFontScale() / 100.0 * this->GetFontCharSpace() / 100.0);
+
+    }
+
+    if( m_missingWidth != NULL )
+        return m_missingWidth->GetReal ();
+    else
+        return m_dDefWidth;
 }
 
-void PdfFontMetricsObject::GetWidthArray( PdfVariant & var, unsigned int nFirst, unsigned int nLast ) const
+void PdfFontMetricsObject::GetWidthArray( PdfVariant & var, unsigned int, unsigned int ) const
 {
     var = m_width;
 }
 
-double PdfFontMetricsObject::GetGlyphWidth( int nGlyphId ) const
+double PdfFontMetricsObject::GetGlyphWidth( int ) const
 {
     // TODO
     return 0.0; // OC 13.08.2010 BugFix: Avoid microsoft compiler error
 }
 
-double PdfFontMetricsObject::GetGlyphWidth( const char* pszGlyphname ) const
+double PdfFontMetricsObject::GetGlyphWidth( const char* ) const
 {
     // TODO
     return 0.0;
 }
 
-long PdfFontMetricsObject::GetGlyphId( long lUnicode ) const
+long PdfFontMetricsObject::GetGlyphId( long ) const
 {
     // TODO
     return 0; // OC 13.08.2010 BugFix: Avoid microsoft compiler error

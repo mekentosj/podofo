@@ -37,6 +37,7 @@ class PdfDestination;
 class PdfDictionary;
 class PdfFileSpec;
 class PdfFont;
+class PdfFontConfigWrapper;
 class PdfInfo;
 class PdfMemDocument;
 class PdfNamesTree;
@@ -291,6 +292,17 @@ class PODOFO_DOC_API PdfDocument {
      */
     PdfPage* CreatePage( const PdfRect & rSize );
 
+
+    /** Creates several new page objects and inserts them into the internal
+     *  page tree. 
+     *  The created pages are owned by the PdfDocument
+     *  and will get deleted along with it!
+     *
+     *  \param vecSizes a vector PdfRect's specifying the size of the pages (i.e the /MediaBox key) in PDF Units
+     */
+    void CreatePages( const std::vector<PdfRect>& vecSizes );
+
+
     /** Appends another PdfDocument to this document
      *  \param rDoc the document to append
      *  \param bAppendAll specifies whether pages and outlines are appended too
@@ -299,13 +311,32 @@ class PODOFO_DOC_API PdfDocument {
     const PdfDocument & Append( const PdfMemDocument & rDoc, bool bAppendAll = true  );
 
     /** Fill an existing empty XObject from a page of another document
+     *  This will append the other document with this one
      *  \param pXObj pointer to the XOject
      *  \param rDoc the document to embedd into XObject
      *  \param nPage page-number to embedd into XObject
-	 *	\param bUseTrimBox if true try to use trimbox for size of xobject
+     *  \param bUseTrimBox if true try to use trimbox for size of xobject
      *  \returns the bounding box
      */
     PdfRect FillXObjectFromDocumentPage( PdfXObject * pXObj, const PdfMemDocument & rDoc, int nPage, bool bUseTrimBox );
+
+    /** Fill an existing empty XObject from an existing page from the current document
+     *  If you need a page from another document use FillXObjectFromDocumentPage, or append the documents manually
+     *  \param pXObj pointer to the XOject
+     *  \param nPage page-number to embedd into XObject
+     *  \param bUseTrimBox if true try to use trimbox for size of xobject
+     *  \returns the bounding box
+     */
+    PdfRect FillXObjectFromExistingPage( PdfXObject * pXObj, int nPage, bool bUseTrimBox );
+
+    /** Fill an existing empty XObject from an existing page pointer from the current document
+     *  This is the implementation for FillXObjectFromDocumentPage and FillXObjectFromExistingPage, you should use those directly instead of this
+     *  \param pXObj pointer to the XOject
+     *  \param pPage pointer to the page to embedd into XObject
+     *  \param bUseTrimBox if true try to use trimbox for size of xobject
+     *  \returns the bounding box
+     */
+    PdfRect FillXObjectFromPage( PdfXObject * pXObj, const PdfPage * pPage, bool bUseTrimBox, unsigned int difference );
 
     /** Attach a file to the document.
      *  \param rFileSpec a file specification
@@ -481,6 +512,15 @@ class PODOFO_DOC_API PdfDocument {
      *  \returns the vector of objects
      */
     inline const PdfVecObjects* GetObjects() const;
+
+    /**
+     * Set wrapper for the fontconfig library.
+     * Useful to avoid initializing Fontconfig multiple times.
+     *
+     * This setter can be called until first use of Fontconfig
+     * as the library is initialized at first use.
+     */
+    inline void SetFontConfigWrapper(const PdfFontConfigWrapper & rFontConfig);
 
  protected:
     /** Construct a new (empty) PdfDocument
@@ -673,6 +713,14 @@ inline const PdfVecObjects* PdfDocument::GetObjects() const
 inline FT_Library PdfDocument::GetFontLibrary() const
 {
     return this->m_fontCache.GetFontLibrary();
+}
+
+// -----------------------------------------------------
+// 
+// -----------------------------------------------------
+inline void PdfDocument::SetFontConfigWrapper(const PdfFontConfigWrapper & rFontConfig)
+{
+    m_fontCache.SetFontConfigWrapper(rFontConfig);
 }
 
 };

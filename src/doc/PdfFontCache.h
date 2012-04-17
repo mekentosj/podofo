@@ -25,8 +25,9 @@
 #include "podofo/base/Pdf3rdPtyForwardDecl.h"
 #include "podofo/base/PdfEncoding.h"
 #include "podofo/base/PdfEncodingFactory.h"
-#include "podofo/base/util/PdfMutex.h"
+
 #include "PdfFont.h"
+#include "PdfFontConfigWrapper.h"
 
 namespace PoDoFo {
 
@@ -129,10 +130,6 @@ class PODOFO_DOC_API PdfFontCache {
     typedef TSortedFontList::iterator       TISortedFontList;
     typedef TSortedFontList::const_iterator TCISortedFontList;
 
-#if defined(PODOFO_HAVE_FONTCONFIG)
-    static Util::PdfMutex m_FcMutex;
-#endif
-
  public:
 
     /**
@@ -150,6 +147,15 @@ class PODOFO_DOC_API PdfFontCache {
      *                 to create new font objects
      */
     PdfFontCache( PdfVecObjects* pParent );
+
+    /** Create an empty font cache 
+     *
+     *  \param rFontConfig provide a handle to fontconfig, as initializing a 
+     *         new fontconfig intance might be time consuming.
+     *  \param pParent a PdfVecObjects which is required
+     *                 to create new font objects
+     */
+    PdfFontCache( const PdfFontConfigWrapper & rFontConfig, PdfVecObjects* pParent );
 
     /** Destroy and empty the font cache
      */
@@ -266,7 +272,8 @@ class PODOFO_DOC_API PdfFontCache {
     /** Get the path of a font file on a Unix system using fontconfig
      *
      *  This method is only available if PoDoFo was compiled with
-     *  fontconfig support.
+     *  fontconfig support. Make sure to lock any FontConfig mutexes before
+     *  calling this method by yourself!
      *
      *  \param pConfig a handle to an initialized fontconfig library
      *  \param pszFontName name of the requested font
@@ -283,6 +290,15 @@ class PODOFO_DOC_API PdfFontCache {
      *  \returns the internal handle to the freetype library
      */
     inline FT_Library GetFontLibrary() const;
+
+    /**
+     * Set wrapper for the fontconfig library.
+     * Useful to avoid initializing Fontconfig multiple times.
+     *
+     * This setter can be called until first use of Fontconfig
+     * as the library is initialized at first use.
+     */
+    inline void SetFontConfigWrapper(const PdfFontConfigWrapper & rFontConfig);
 
  private:
     /**
@@ -357,9 +373,9 @@ class PODOFO_DOC_API PdfFontCache {
     TSortedFontList m_vecFontSubsets;
     FT_Library      m_ftLibrary;             ///< Handle to the freetype library
 
-    void*           m_pFcConfig;             ///< Handle to fontconfig on unix systems
-
     PdfVecObjects*  m_pParent;               ///< Handle to parent for creating new fonts and objects
+
+    PdfFontConfigWrapper m_fontConfig;       ///< Handle to the fontconfig library
 };
 
 // Peter Petrov: 26 April 2008
@@ -369,6 +385,14 @@ class PODOFO_DOC_API PdfFontCache {
 FT_Library PdfFontCache::GetFontLibrary() const
 {
     return this->m_ftLibrary;
+}
+
+// -----------------------------------------------------
+// 
+// -----------------------------------------------------
+inline void PdfFontCache::SetFontConfigWrapper(const PdfFontConfigWrapper & rFontConfig)
+{
+    m_fontConfig = rFontConfig;
 }
 
 };

@@ -34,13 +34,14 @@
 namespace PoDoFo {
 
 PdfFontType1::PdfFontType1( PdfFontMetrics* pMetrics, const PdfEncoding* const pEncoding, 
-                            PdfVecObjects* pParent, bool bEmbed )
+                            PdfVecObjects* pParent, bool bEmbed, bool bSubsetting )
     : PdfFontSimple( pMetrics, pEncoding, pParent )
 {
 	memset( m_bUsed, 0, sizeof( m_bUsed ) );
+	m_bIsSubsetting = bSubsetting;
     this->Init( bEmbed, PdfName("Type1") );
 }
- 
+
 
 PdfFontType1::PdfFontType1( PdfFontMetrics* pMetrics, const PdfEncoding* const pEncoding, 
                             PdfObject* pObject )
@@ -55,6 +56,10 @@ PdfFontType1::PdfFontType1( PdfFontType1* pFont, PdfFontMetrics* pMetrics, const
 	memset( m_bUsed, 0, sizeof( m_bUsed ) );
 	// don't embedd font
     Init( false, PdfName("Type1") );
+
+	// Use identical subset-names
+	if ( pFont->IsSubsetting() )
+		GetObject()->GetDictionary().AddKey( "BaseFont", pFont->GetObject()->GetDictionary().GetKey( "BaseFont" ) );
 
 	// set identifier
 	std::string id = pFont->GetIdentifier().GetName();
@@ -169,9 +174,6 @@ void PdfFontType1::EmbedSubsetFont()
 	bool dupFound = false;
 	for ( int i = 0; i < length; i++ )
 	{
-		// TODO: only embed with used glyphs
-		EmbedFontFile( m_pDescriptor );
-		m_bWasEmbedded = true;
 		line += static_cast<char>( inBuff[inIndex+i] );
 		if ( inBuff[inIndex+i] == '\r' )
 		{
