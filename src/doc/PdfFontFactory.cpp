@@ -295,6 +295,7 @@ EPdfFontType PdfFontFactory::GetFontType( const char* pszFilename )
 PdfFontMetricsBase14*
 PODOFO_Base14FontDef_FindBuiltinData(const char  *font_name)
 {
+    /*
     unsigned int i = 0;
 	bool found = false;
     while (PODOFO_BUILTIN_FONTS[i].font_name) {
@@ -308,6 +309,9 @@ PODOFO_Base14FontDef_FindBuiltinData(const char  *font_name)
     }
 
 	return found ? &PODOFO_BUILTIN_FONTS[i] : NULL;
+     */
+    
+    return NULL;
 }
 
 PdfFont* CreateBase14Font(const char* pszFontName, const PdfEncoding * const pEncoding,PdfVecObjects *pvecObjects)
