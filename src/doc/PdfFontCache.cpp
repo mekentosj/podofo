@@ -318,7 +318,6 @@ PdfFontCache::PdfFontCache( const PdfFontConfigWrapper & rFontConfig, PdfVecObje
     {
         PODOFO_RAISE_ERROR( ePdfError_FreeType );
     }
-#endif
 }
 
 PdfFontCache::~PdfFontCache()
@@ -330,7 +329,6 @@ PdfFontCache::~PdfFontCache()
         FT_Done_FreeType( m_ftLibrary );
         m_ftLibrary = NULL;
     }
-#endif
 }
 
 void PdfFontCache::EmptyCache() 
