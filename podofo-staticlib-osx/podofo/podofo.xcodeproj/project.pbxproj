@@ -1,0 +1,670 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5F261C31153DC30A00FC2A6D /* PdfAcroForm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C04153DC30900FC2A6D /* PdfAcroForm.cpp */; };
+		5F261C32153DC30A00FC2A6D /* PdfAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C05153DC30900FC2A6D /* PdfAction.cpp */; };
+		5F261C33153DC30A00FC2A6D /* PdfAnnotation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C06153DC30900FC2A6D /* PdfAnnotation.cpp */; };
+		5F261C34153DC30A00FC2A6D /* PdfContents.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C07153DC30900FC2A6D /* PdfContents.cpp */; };
+		5F261C35153DC30A00FC2A6D /* PdfDestination.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C08153DC30900FC2A6D /* PdfDestination.cpp */; };
+		5F261C36153DC30A00FC2A6D /* PdfDifferenceEncoding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C09153DC30900FC2A6D /* PdfDifferenceEncoding.cpp */; };
+		5F261C37153DC30A00FC2A6D /* PdfDocument.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C0A153DC30900FC2A6D /* PdfDocument.cpp */; };
+		5F261C38153DC30A00FC2A6D /* PdfElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C0B153DC30900FC2A6D /* PdfElement.cpp */; };
+		5F261C39153DC30A00FC2A6D /* PdfEncodingObjectFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C0C153DC30900FC2A6D /* PdfEncodingObjectFactory.cpp */; };
+		5F261C3A153DC30A00FC2A6D /* PdfExtGState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C0D153DC30900FC2A6D /* PdfExtGState.cpp */; };
+		5F261C3B153DC30A00FC2A6D /* PdfField.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C0E153DC30900FC2A6D /* PdfField.cpp */; };
+		5F261C3C153DC30A00FC2A6D /* PdfFileSpec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C0F153DC30900FC2A6D /* PdfFileSpec.cpp */; };
+		5F261C3D153DC30A00FC2A6D /* PdfFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C10153DC30A00FC2A6D /* PdfFont.cpp */; };
+		5F261C3E153DC30A00FC2A6D /* PdfFontCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C11153DC30A00FC2A6D /* PdfFontCache.cpp */; };
+		5F261C40153DC30A00FC2A6D /* PdfFontFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C13153DC30A00FC2A6D /* PdfFontFactory.cpp */; };
+		5F261C41153DC30A00FC2A6D /* PdfFontMetrics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C14153DC30A00FC2A6D /* PdfFontMetrics.cpp */; };
+		5F261C43153DC30A00FC2A6D /* PdfFontMetricsFreetype.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C16153DC30A00FC2A6D /* PdfFontMetricsFreetype.cpp */; };
+		5F261C44153DC30A00FC2A6D /* PdfFontMetricsObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C17153DC30A00FC2A6D /* PdfFontMetricsObject.cpp */; };
+		5F261C45153DC30A00FC2A6D /* PdfFontSimple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C18153DC30A00FC2A6D /* PdfFontSimple.cpp */; };
+		5F261C46153DC30A00FC2A6D /* PdfFontTrueType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C19153DC30A00FC2A6D /* PdfFontTrueType.cpp */; };
+		5F261C47153DC30A00FC2A6D /* PdfFontTTFSubset.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C1A153DC30A00FC2A6D /* PdfFontTTFSubset.cpp */; };
+		5F261C48153DC30A00FC2A6D /* PdfFontType1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C1B153DC30A00FC2A6D /* PdfFontType1.cpp */; };
+		5F261C49153DC30A00FC2A6D /* PdfFontType1Base14.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C1C153DC30A00FC2A6D /* PdfFontType1Base14.cpp */; };
+		5F261C4A153DC30A00FC2A6D /* PdfFunction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C1D153DC30A00FC2A6D /* PdfFunction.cpp */; };
+		5F261C4B153DC30A00FC2A6D /* PdfHintStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C1E153DC30A00FC2A6D /* PdfHintStream.cpp */; };
+		5F261C4C153DC30A00FC2A6D /* PdfIdentityEncoding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C1F153DC30A00FC2A6D /* PdfIdentityEncoding.cpp */; };
+		5F261C4D153DC30A00FC2A6D /* PdfImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C20153DC30A00FC2A6D /* PdfImage.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		5F261C4E153DC30A00FC2A6D /* PdfInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C21153DC30A00FC2A6D /* PdfInfo.cpp */; };
+		5F261C4F153DC30A00FC2A6D /* PdfMemDocument.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C22153DC30A00FC2A6D /* PdfMemDocument.cpp */; };
+		5F261C50153DC30A00FC2A6D /* PdfNamesTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C23153DC30A00FC2A6D /* PdfNamesTree.cpp */; };
+		5F261C51153DC30A00FC2A6D /* PdfOutlines.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C24153DC30A00FC2A6D /* PdfOutlines.cpp */; };
+		5F261C52153DC30A00FC2A6D /* PdfPage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C25153DC30A00FC2A6D /* PdfPage.cpp */; };
+		5F261C53153DC30A00FC2A6D /* PdfPagesTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C26153DC30A00FC2A6D /* PdfPagesTree.cpp */; };
+		5F261C54153DC30A00FC2A6D /* PdfPagesTreeCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C27153DC30A00FC2A6D /* PdfPagesTreeCache.cpp */; };
+		5F261C55153DC30A00FC2A6D /* PdfPainter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C28153DC30A00FC2A6D /* PdfPainter.cpp */; };
+		5F261C56153DC30A00FC2A6D /* PdfPainterMM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C29153DC30A00FC2A6D /* PdfPainterMM.cpp */; };
+		5F261C57153DC30A00FC2A6D /* PdfShadingPattern.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C2A153DC30A00FC2A6D /* PdfShadingPattern.cpp */; };
+		5F261C58153DC30A00FC2A6D /* PdfSignatureField.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C2B153DC30A00FC2A6D /* PdfSignatureField.cpp */; };
+		5F261C59153DC30A00FC2A6D /* PdfSignOutputDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C2C153DC30A00FC2A6D /* PdfSignOutputDevice.cpp */; };
+		5F261C5A153DC30A00FC2A6D /* PdfStreamedDocument.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C2D153DC30A00FC2A6D /* PdfStreamedDocument.cpp */; };
+		5F261C5B153DC30A00FC2A6D /* PdfTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C2E153DC30A00FC2A6D /* PdfTable.cpp */; };
+		5F261C5D153DC30A00FC2A6D /* PdfXObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F261C30153DC30A00FC2A6D /* PdfXObject.cpp */; };
+		5F261C5F153DC3C800FC2A6D /* PdfDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F261C5E153DC3C800FC2A6D /* PdfDefines.h */; };
+		5F27948F153CB73600569AD5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F27948E153CB73600569AD5 /* Foundation.framework */; };
+		5F2794C8153CB7EC00569AD5 /* PdfArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F27949E153CB7EC00569AD5 /* PdfArray.cpp */; };
+		5F2794C9153CB7EC00569AD5 /* PdfCanvas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F27949F153CB7EC00569AD5 /* PdfCanvas.cpp */; };
+		5F2794CA153CB7EC00569AD5 /* PdfColor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794A0153CB7EC00569AD5 /* PdfColor.cpp */; };
+		5F2794CB153CB7EC00569AD5 /* PdfContentsTokenizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794A1153CB7EC00569AD5 /* PdfContentsTokenizer.cpp */; };
+		5F2794CC153CB7EC00569AD5 /* PdfData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794A2153CB7EC00569AD5 /* PdfData.cpp */; };
+		5F2794CD153CB7ED00569AD5 /* PdfDataType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794A3153CB7EC00569AD5 /* PdfDataType.cpp */; };
+		5F2794CE153CB7ED00569AD5 /* PdfDate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794A4153CB7EC00569AD5 /* PdfDate.cpp */; };
+		5F2794CF153CB7ED00569AD5 /* PdfDictionary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794A5153CB7EC00569AD5 /* PdfDictionary.cpp */; };
+		5F2794D0153CB7ED00569AD5 /* PdfEncoding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794A6153CB7EC00569AD5 /* PdfEncoding.cpp */; };
+		5F2794D1153CB7ED00569AD5 /* PdfEncodingFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794A7153CB7EC00569AD5 /* PdfEncodingFactory.cpp */; };
+		5F2794D2153CB7ED00569AD5 /* PdfEncrypt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794A8153CB7EC00569AD5 /* PdfEncrypt.cpp */; };
+		5F2794D3153CB7ED00569AD5 /* PdfError.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794A9153CB7EC00569AD5 /* PdfError.cpp */; };
+		5F2794D4153CB7ED00569AD5 /* PdfFileStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794AA153CB7EC00569AD5 /* PdfFileStream.cpp */; };
+		5F2794D5153CB7ED00569AD5 /* PdfFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794AB153CB7EC00569AD5 /* PdfFilter.cpp */; };
+		5F2794D6153CB7ED00569AD5 /* PdfFiltersPrivate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794AC153CB7EC00569AD5 /* PdfFiltersPrivate.cpp */; };
+		5F2794D7153CB7ED00569AD5 /* PdfImmediateWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794AD153CB7EC00569AD5 /* PdfImmediateWriter.cpp */; };
+		5F2794D8153CB7ED00569AD5 /* PdfInputDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794AE153CB7EC00569AD5 /* PdfInputDevice.cpp */; };
+		5F2794D9153CB7ED00569AD5 /* PdfInputStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794AF153CB7EC00569AD5 /* PdfInputStream.cpp */; };
+		5F2794DA153CB7ED00569AD5 /* PdfLocale.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794B0153CB7EC00569AD5 /* PdfLocale.cpp */; };
+		5F2794DB153CB7ED00569AD5 /* PdfMemoryManagement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794B1153CB7EC00569AD5 /* PdfMemoryManagement.cpp */; };
+		5F2794DC153CB7ED00569AD5 /* PdfMemStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794B2153CB7EC00569AD5 /* PdfMemStream.cpp */; };
+		5F2794DD153CB7ED00569AD5 /* PdfName.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794B3153CB7EC00569AD5 /* PdfName.cpp */; };
+		5F2794DE153CB7ED00569AD5 /* PdfObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794B4153CB7EC00569AD5 /* PdfObject.cpp */; };
+		5F2794DF153CB7ED00569AD5 /* PdfObjectStreamParserObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794B5153CB7EC00569AD5 /* PdfObjectStreamParserObject.cpp */; };
+		5F2794E0153CB7ED00569AD5 /* PdfOutputDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794B6153CB7EC00569AD5 /* PdfOutputDevice.cpp */; };
+		5F2794E1153CB7ED00569AD5 /* PdfOutputStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794B7153CB7EC00569AD5 /* PdfOutputStream.cpp */; };
+		5F2794E2153CB7ED00569AD5 /* PdfParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794B8153CB7EC00569AD5 /* PdfParser.cpp */; };
+		5F2794E3153CB7ED00569AD5 /* PdfParserObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794B9153CB7EC00569AD5 /* PdfParserObject.cpp */; };
+		5F2794E4153CB7ED00569AD5 /* PdfRect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794BA153CB7EC00569AD5 /* PdfRect.cpp */; };
+		5F2794E5153CB7ED00569AD5 /* PdfRefCountedBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794BB153CB7EC00569AD5 /* PdfRefCountedBuffer.cpp */; };
+		5F2794E6153CB7ED00569AD5 /* PdfRefCountedInputDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794BC153CB7EC00569AD5 /* PdfRefCountedInputDevice.cpp */; };
+		5F2794E7153CB7ED00569AD5 /* PdfReference.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794BD153CB7EC00569AD5 /* PdfReference.cpp */; };
+		5F2794E8153CB7ED00569AD5 /* PdfRijndael.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794BE153CB7EC00569AD5 /* PdfRijndael.cpp */; };
+		5F2794E9153CB7ED00569AD5 /* PdfStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794BF153CB7EC00569AD5 /* PdfStream.cpp */; };
+		5F2794EA153CB7ED00569AD5 /* PdfString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794C0153CB7EC00569AD5 /* PdfString.cpp */; };
+		5F2794EB153CB7ED00569AD5 /* PdfTokenizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794C1153CB7EC00569AD5 /* PdfTokenizer.cpp */; };
+		5F2794EC153CB7ED00569AD5 /* PdfVariant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794C2153CB7EC00569AD5 /* PdfVariant.cpp */; };
+		5F2794ED153CB7ED00569AD5 /* PdfVecObjects.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794C3153CB7EC00569AD5 /* PdfVecObjects.cpp */; };
+		5F2794EE153CB7ED00569AD5 /* PdfWriter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794C4153CB7EC00569AD5 /* PdfWriter.cpp */; };
+		5F2794EF153CB7ED00569AD5 /* PdfXRef.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794C5153CB7EC00569AD5 /* PdfXRef.cpp */; };
+		5F2794F0153CB7ED00569AD5 /* PdfXRefStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794C6153CB7EC00569AD5 /* PdfXRefStream.cpp */; };
+		5F2794F1153CB7ED00569AD5 /* PdfXRefStreamParserObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F2794C7153CB7EC00569AD5 /* PdfXRefStreamParserObject.cpp */; };
+		5F2794F3153CB85B00569AD5 /* PdfVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F2794F2153CB85B00569AD5 /* PdfVersion.h */; };
+		5F2794F6153CB92B00569AD5 /* PdfDefinesPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F2794F5153CB92B00569AD5 /* PdfDefinesPrivate.h */; };
+		CA8B7068153E08BB00D13990 /* PdfFontCID.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA8B7067153E08BB00D13990 /* PdfFontCID.cpp */; };
+		CA8B706A153E095C00D13990 /* PdfFontMetricsBase14.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA8B7069153E095C00D13990 /* PdfFontMetricsBase14.cpp */; };
+		CA8B7070153E0F5600D13990 /* PdfCMapEncoding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA8B706E153E0F5600D13990 /* PdfCMapEncoding.cpp */; };
+		CA8B7071153E0F5600D13990 /* PdfFontConfigWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA8B706F153E0F5600D13990 /* PdfFontConfigWrapper.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5F261C04153DC30900FC2A6D /* PdfAcroForm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfAcroForm.cpp; path = ../../../../Extras/podofo/src/doc/PdfAcroForm.cpp; sourceTree = "<group>"; };
+		5F261C05153DC30900FC2A6D /* PdfAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfAction.cpp; path = ../../../../Extras/podofo/src/doc/PdfAction.cpp; sourceTree = "<group>"; };
+		5F261C06153DC30900FC2A6D /* PdfAnnotation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfAnnotation.cpp; path = ../../../../Extras/podofo/src/doc/PdfAnnotation.cpp; sourceTree = "<group>"; };
+		5F261C07153DC30900FC2A6D /* PdfContents.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfContents.cpp; path = ../../../../Extras/podofo/src/doc/PdfContents.cpp; sourceTree = "<group>"; };
+		5F261C08153DC30900FC2A6D /* PdfDestination.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfDestination.cpp; path = ../../../../Extras/podofo/src/doc/PdfDestination.cpp; sourceTree = "<group>"; };
+		5F261C09153DC30900FC2A6D /* PdfDifferenceEncoding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfDifferenceEncoding.cpp; path = ../../../../Extras/podofo/src/doc/PdfDifferenceEncoding.cpp; sourceTree = "<group>"; };
+		5F261C0A153DC30900FC2A6D /* PdfDocument.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfDocument.cpp; path = ../../../../Extras/podofo/src/doc/PdfDocument.cpp; sourceTree = "<group>"; };
+		5F261C0B153DC30900FC2A6D /* PdfElement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfElement.cpp; path = ../../../../Extras/podofo/src/doc/PdfElement.cpp; sourceTree = "<group>"; };
+		5F261C0C153DC30900FC2A6D /* PdfEncodingObjectFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfEncodingObjectFactory.cpp; path = ../../../../Extras/podofo/src/doc/PdfEncodingObjectFactory.cpp; sourceTree = "<group>"; };
+		5F261C0D153DC30900FC2A6D /* PdfExtGState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfExtGState.cpp; path = ../../../../Extras/podofo/src/doc/PdfExtGState.cpp; sourceTree = "<group>"; };
+		5F261C0E153DC30900FC2A6D /* PdfField.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfField.cpp; path = ../../../../Extras/podofo/src/doc/PdfField.cpp; sourceTree = "<group>"; };
+		5F261C0F153DC30900FC2A6D /* PdfFileSpec.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfFileSpec.cpp; path = ../../../../Extras/podofo/src/doc/PdfFileSpec.cpp; sourceTree = "<group>"; };
+		5F261C10153DC30A00FC2A6D /* PdfFont.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfFont.cpp; path = ../../../../Extras/podofo/src/doc/PdfFont.cpp; sourceTree = "<group>"; };
+		5F261C11153DC30A00FC2A6D /* PdfFontCache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfFontCache.cpp; path = ../../../../Extras/podofo/src/doc/PdfFontCache.cpp; sourceTree = "<group>"; };
+		5F261C13153DC30A00FC2A6D /* PdfFontFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfFontFactory.cpp; path = ../../../../Extras/podofo/src/doc/PdfFontFactory.cpp; sourceTree = "<group>"; };
+		5F261C14153DC30A00FC2A6D /* PdfFontMetrics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfFontMetrics.cpp; path = ../../../../Extras/podofo/src/doc/PdfFontMetrics.cpp; sourceTree = "<group>"; };
+		5F261C16153DC30A00FC2A6D /* PdfFontMetricsFreetype.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfFontMetricsFreetype.cpp; path = ../../../../Extras/podofo/src/doc/PdfFontMetricsFreetype.cpp; sourceTree = "<group>"; };
+		5F261C17153DC30A00FC2A6D /* PdfFontMetricsObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfFontMetricsObject.cpp; path = ../../../../Extras/podofo/src/doc/PdfFontMetricsObject.cpp; sourceTree = "<group>"; };
+		5F261C18153DC30A00FC2A6D /* PdfFontSimple.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfFontSimple.cpp; path = ../../../../Extras/podofo/src/doc/PdfFontSimple.cpp; sourceTree = "<group>"; };
+		5F261C19153DC30A00FC2A6D /* PdfFontTrueType.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfFontTrueType.cpp; path = ../../../../Extras/podofo/src/doc/PdfFontTrueType.cpp; sourceTree = "<group>"; };
+		5F261C1A153DC30A00FC2A6D /* PdfFontTTFSubset.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfFontTTFSubset.cpp; path = ../../../../Extras/podofo/src/doc/PdfFontTTFSubset.cpp; sourceTree = "<group>"; };
+		5F261C1B153DC30A00FC2A6D /* PdfFontType1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfFontType1.cpp; path = ../../../../Extras/podofo/src/doc/PdfFontType1.cpp; sourceTree = "<group>"; };
+		5F261C1C153DC30A00FC2A6D /* PdfFontType1Base14.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfFontType1Base14.cpp; path = ../../../../Extras/podofo/src/doc/PdfFontType1Base14.cpp; sourceTree = "<group>"; };
+		5F261C1D153DC30A00FC2A6D /* PdfFunction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfFunction.cpp; path = ../../../../Extras/podofo/src/doc/PdfFunction.cpp; sourceTree = "<group>"; };
+		5F261C1E153DC30A00FC2A6D /* PdfHintStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfHintStream.cpp; path = ../../../../Extras/podofo/src/doc/PdfHintStream.cpp; sourceTree = "<group>"; };
+		5F261C1F153DC30A00FC2A6D /* PdfIdentityEncoding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfIdentityEncoding.cpp; path = ../../../../Extras/podofo/src/doc/PdfIdentityEncoding.cpp; sourceTree = "<group>"; };
+		5F261C20153DC30A00FC2A6D /* PdfImage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfImage.cpp; path = ../../../../Extras/podofo/src/doc/PdfImage.cpp; sourceTree = "<group>"; };
+		5F261C21153DC30A00FC2A6D /* PdfInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfInfo.cpp; path = ../../../../Extras/podofo/src/doc/PdfInfo.cpp; sourceTree = "<group>"; };
+		5F261C22153DC30A00FC2A6D /* PdfMemDocument.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfMemDocument.cpp; path = ../../../../Extras/podofo/src/doc/PdfMemDocument.cpp; sourceTree = "<group>"; };
+		5F261C23153DC30A00FC2A6D /* PdfNamesTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfNamesTree.cpp; path = ../../../../Extras/podofo/src/doc/PdfNamesTree.cpp; sourceTree = "<group>"; };
+		5F261C24153DC30A00FC2A6D /* PdfOutlines.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfOutlines.cpp; path = ../../../../Extras/podofo/src/doc/PdfOutlines.cpp; sourceTree = "<group>"; };
+		5F261C25153DC30A00FC2A6D /* PdfPage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfPage.cpp; path = ../../../../Extras/podofo/src/doc/PdfPage.cpp; sourceTree = "<group>"; };
+		5F261C26153DC30A00FC2A6D /* PdfPagesTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfPagesTree.cpp; path = ../../../../Extras/podofo/src/doc/PdfPagesTree.cpp; sourceTree = "<group>"; };
+		5F261C27153DC30A00FC2A6D /* PdfPagesTreeCache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfPagesTreeCache.cpp; path = ../../../../Extras/podofo/src/doc/PdfPagesTreeCache.cpp; sourceTree = "<group>"; };
+		5F261C28153DC30A00FC2A6D /* PdfPainter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfPainter.cpp; path = ../../../../Extras/podofo/src/doc/PdfPainter.cpp; sourceTree = "<group>"; };
+		5F261C29153DC30A00FC2A6D /* PdfPainterMM.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfPainterMM.cpp; path = ../../../../Extras/podofo/src/doc/PdfPainterMM.cpp; sourceTree = "<group>"; };
+		5F261C2A153DC30A00FC2A6D /* PdfShadingPattern.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfShadingPattern.cpp; path = ../../../../Extras/podofo/src/doc/PdfShadingPattern.cpp; sourceTree = "<group>"; };
+		5F261C2B153DC30A00FC2A6D /* PdfSignatureField.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfSignatureField.cpp; path = ../../../../Extras/podofo/src/doc/PdfSignatureField.cpp; sourceTree = "<group>"; };
+		5F261C2C153DC30A00FC2A6D /* PdfSignOutputDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfSignOutputDevice.cpp; path = ../../../../Extras/podofo/src/doc/PdfSignOutputDevice.cpp; sourceTree = "<group>"; };
+		5F261C2D153DC30A00FC2A6D /* PdfStreamedDocument.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfStreamedDocument.cpp; path = ../../../../Extras/podofo/src/doc/PdfStreamedDocument.cpp; sourceTree = "<group>"; };
+		5F261C2E153DC30A00FC2A6D /* PdfTable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfTable.cpp; path = ../../../../Extras/podofo/src/doc/PdfTable.cpp; sourceTree = "<group>"; };
+		5F261C30153DC30A00FC2A6D /* PdfXObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfXObject.cpp; path = ../../../../Extras/podofo/src/doc/PdfXObject.cpp; sourceTree = "<group>"; };
+		5F261C5E153DC3C800FC2A6D /* PdfDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PdfDefines.h; path = ../../../../Extras/podofo/src/base/PdfDefines.h; sourceTree = "<group>"; };
+		5F27948B153CB73600569AD5 /* libpodofo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libpodofo.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F27948E153CB73600569AD5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5F279492153CB73600569AD5 /* podofo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "podofo-Prefix.pch"; sourceTree = "<group>"; };
+		5F27949E153CB7EC00569AD5 /* PdfArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfArray.cpp; path = ../../../../Extras/podofo/src/base/PdfArray.cpp; sourceTree = "<group>"; };
+		5F27949F153CB7EC00569AD5 /* PdfCanvas.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfCanvas.cpp; path = ../../../../Extras/podofo/src/base/PdfCanvas.cpp; sourceTree = "<group>"; };
+		5F2794A0153CB7EC00569AD5 /* PdfColor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfColor.cpp; path = ../../../../Extras/podofo/src/base/PdfColor.cpp; sourceTree = "<group>"; };
+		5F2794A1153CB7EC00569AD5 /* PdfContentsTokenizer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfContentsTokenizer.cpp; path = ../../../../Extras/podofo/src/base/PdfContentsTokenizer.cpp; sourceTree = "<group>"; };
+		5F2794A2153CB7EC00569AD5 /* PdfData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfData.cpp; path = ../../../../Extras/podofo/src/base/PdfData.cpp; sourceTree = "<group>"; };
+		5F2794A3153CB7EC00569AD5 /* PdfDataType.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfDataType.cpp; path = ../../../../Extras/podofo/src/base/PdfDataType.cpp; sourceTree = "<group>"; };
+		5F2794A4153CB7EC00569AD5 /* PdfDate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfDate.cpp; path = ../../../../Extras/podofo/src/base/PdfDate.cpp; sourceTree = "<group>"; };
+		5F2794A5153CB7EC00569AD5 /* PdfDictionary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfDictionary.cpp; path = ../../../../Extras/podofo/src/base/PdfDictionary.cpp; sourceTree = "<group>"; };
+		5F2794A6153CB7EC00569AD5 /* PdfEncoding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfEncoding.cpp; path = ../../../../Extras/podofo/src/base/PdfEncoding.cpp; sourceTree = "<group>"; };
+		5F2794A7153CB7EC00569AD5 /* PdfEncodingFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfEncodingFactory.cpp; path = ../../../../Extras/podofo/src/base/PdfEncodingFactory.cpp; sourceTree = "<group>"; };
+		5F2794A8153CB7EC00569AD5 /* PdfEncrypt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfEncrypt.cpp; path = ../../../../Extras/podofo/src/base/PdfEncrypt.cpp; sourceTree = "<group>"; };
+		5F2794A9153CB7EC00569AD5 /* PdfError.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfError.cpp; path = ../../../../Extras/podofo/src/base/PdfError.cpp; sourceTree = "<group>"; };
+		5F2794AA153CB7EC00569AD5 /* PdfFileStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfFileStream.cpp; path = ../../../../Extras/podofo/src/base/PdfFileStream.cpp; sourceTree = "<group>"; };
+		5F2794AB153CB7EC00569AD5 /* PdfFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfFilter.cpp; path = ../../../../Extras/podofo/src/base/PdfFilter.cpp; sourceTree = "<group>"; };
+		5F2794AC153CB7EC00569AD5 /* PdfFiltersPrivate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfFiltersPrivate.cpp; path = ../../../../Extras/podofo/src/base/PdfFiltersPrivate.cpp; sourceTree = "<group>"; };
+		5F2794AD153CB7EC00569AD5 /* PdfImmediateWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfImmediateWriter.cpp; path = ../../../../Extras/podofo/src/base/PdfImmediateWriter.cpp; sourceTree = "<group>"; };
+		5F2794AE153CB7EC00569AD5 /* PdfInputDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfInputDevice.cpp; path = ../../../../Extras/podofo/src/base/PdfInputDevice.cpp; sourceTree = "<group>"; };
+		5F2794AF153CB7EC00569AD5 /* PdfInputStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfInputStream.cpp; path = ../../../../Extras/podofo/src/base/PdfInputStream.cpp; sourceTree = "<group>"; };
+		5F2794B0153CB7EC00569AD5 /* PdfLocale.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfLocale.cpp; path = ../../../../Extras/podofo/src/base/PdfLocale.cpp; sourceTree = "<group>"; };
+		5F2794B1153CB7EC00569AD5 /* PdfMemoryManagement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfMemoryManagement.cpp; path = ../../../../Extras/podofo/src/base/PdfMemoryManagement.cpp; sourceTree = "<group>"; };
+		5F2794B2153CB7EC00569AD5 /* PdfMemStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfMemStream.cpp; path = ../../../../Extras/podofo/src/base/PdfMemStream.cpp; sourceTree = "<group>"; };
+		5F2794B3153CB7EC00569AD5 /* PdfName.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfName.cpp; path = ../../../../Extras/podofo/src/base/PdfName.cpp; sourceTree = "<group>"; };
+		5F2794B4153CB7EC00569AD5 /* PdfObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfObject.cpp; path = ../../../../Extras/podofo/src/base/PdfObject.cpp; sourceTree = "<group>"; };
+		5F2794B5153CB7EC00569AD5 /* PdfObjectStreamParserObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfObjectStreamParserObject.cpp; path = ../../../../Extras/podofo/src/base/PdfObjectStreamParserObject.cpp; sourceTree = "<group>"; };
+		5F2794B6153CB7EC00569AD5 /* PdfOutputDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfOutputDevice.cpp; path = ../../../../Extras/podofo/src/base/PdfOutputDevice.cpp; sourceTree = "<group>"; };
+		5F2794B7153CB7EC00569AD5 /* PdfOutputStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfOutputStream.cpp; path = ../../../../Extras/podofo/src/base/PdfOutputStream.cpp; sourceTree = "<group>"; };
+		5F2794B8153CB7EC00569AD5 /* PdfParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfParser.cpp; path = ../../../../Extras/podofo/src/base/PdfParser.cpp; sourceTree = "<group>"; };
+		5F2794B9153CB7EC00569AD5 /* PdfParserObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfParserObject.cpp; path = ../../../../Extras/podofo/src/base/PdfParserObject.cpp; sourceTree = "<group>"; };
+		5F2794BA153CB7EC00569AD5 /* PdfRect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfRect.cpp; path = ../../../../Extras/podofo/src/base/PdfRect.cpp; sourceTree = "<group>"; };
+		5F2794BB153CB7EC00569AD5 /* PdfRefCountedBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfRefCountedBuffer.cpp; path = ../../../../Extras/podofo/src/base/PdfRefCountedBuffer.cpp; sourceTree = "<group>"; };
+		5F2794BC153CB7EC00569AD5 /* PdfRefCountedInputDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfRefCountedInputDevice.cpp; path = ../../../../Extras/podofo/src/base/PdfRefCountedInputDevice.cpp; sourceTree = "<group>"; };
+		5F2794BD153CB7EC00569AD5 /* PdfReference.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfReference.cpp; path = ../../../../Extras/podofo/src/base/PdfReference.cpp; sourceTree = "<group>"; };
+		5F2794BE153CB7EC00569AD5 /* PdfRijndael.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfRijndael.cpp; path = ../../../../Extras/podofo/src/base/PdfRijndael.cpp; sourceTree = "<group>"; };
+		5F2794BF153CB7EC00569AD5 /* PdfStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfStream.cpp; path = ../../../../Extras/podofo/src/base/PdfStream.cpp; sourceTree = "<group>"; };
+		5F2794C0153CB7EC00569AD5 /* PdfString.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfString.cpp; path = ../../../../Extras/podofo/src/base/PdfString.cpp; sourceTree = "<group>"; };
+		5F2794C1153CB7EC00569AD5 /* PdfTokenizer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfTokenizer.cpp; path = ../../../../Extras/podofo/src/base/PdfTokenizer.cpp; sourceTree = "<group>"; };
+		5F2794C2153CB7EC00569AD5 /* PdfVariant.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfVariant.cpp; path = ../../../../Extras/podofo/src/base/PdfVariant.cpp; sourceTree = "<group>"; };
+		5F2794C3153CB7EC00569AD5 /* PdfVecObjects.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfVecObjects.cpp; path = ../../../../Extras/podofo/src/base/PdfVecObjects.cpp; sourceTree = "<group>"; };
+		5F2794C4153CB7EC00569AD5 /* PdfWriter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfWriter.cpp; path = ../../../../Extras/podofo/src/base/PdfWriter.cpp; sourceTree = "<group>"; };
+		5F2794C5153CB7EC00569AD5 /* PdfXRef.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfXRef.cpp; path = ../../../../Extras/podofo/src/base/PdfXRef.cpp; sourceTree = "<group>"; };
+		5F2794C6153CB7EC00569AD5 /* PdfXRefStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfXRefStream.cpp; path = ../../../../Extras/podofo/src/base/PdfXRefStream.cpp; sourceTree = "<group>"; };
+		5F2794C7153CB7EC00569AD5 /* PdfXRefStreamParserObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfXRefStreamParserObject.cpp; path = ../../../../Extras/podofo/src/base/PdfXRefStreamParserObject.cpp; sourceTree = "<group>"; };
+		5F2794F2153CB85B00569AD5 /* PdfVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PdfVersion.h; path = ../../../../Extras/podofo/podofo/base/PdfVersion.h; sourceTree = "<group>"; };
+		5F2794F4153CB88C00569AD5 /* podofo_config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = podofo_config.h; sourceTree = "<group>"; };
+		5F2794F5153CB92B00569AD5 /* PdfDefinesPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PdfDefinesPrivate.h; path = ../../../../Extras/podofo/podofo/base/PdfDefinesPrivate.h; sourceTree = "<group>"; };
+		CA8B7067153E08BB00D13990 /* PdfFontCID.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfFontCID.cpp; path = ../../../../Extras/podofo/src/doc/PdfFontCID.cpp; sourceTree = "<group>"; };
+		CA8B7069153E095C00D13990 /* PdfFontMetricsBase14.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfFontMetricsBase14.cpp; path = ../../../../Extras/podofo/src/doc/PdfFontMetricsBase14.cpp; sourceTree = "<group>"; };
+		CA8B706E153E0F5600D13990 /* PdfCMapEncoding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfCMapEncoding.cpp; path = ../../../../Extras/podofo/src/doc/PdfCMapEncoding.cpp; sourceTree = "<group>"; };
+		CA8B706F153E0F5600D13990 /* PdfFontConfigWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PdfFontConfigWrapper.cpp; path = ../../../../Extras/podofo/src/doc/PdfFontConfigWrapper.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5F279488153CB73600569AD5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F27948F153CB73600569AD5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5F261C01153DC23200FC2A6D /* base */ = {
+			isa = PBXGroup;
+			children = (
+				5F2794F5153CB92B00569AD5 /* PdfDefinesPrivate.h */,
+				5F2794F2153CB85B00569AD5 /* PdfVersion.h */,
+				5F27949E153CB7EC00569AD5 /* PdfArray.cpp */,
+				5F27949F153CB7EC00569AD5 /* PdfCanvas.cpp */,
+				5F2794A0153CB7EC00569AD5 /* PdfColor.cpp */,
+				5F2794A1153CB7EC00569AD5 /* PdfContentsTokenizer.cpp */,
+				5F2794A2153CB7EC00569AD5 /* PdfData.cpp */,
+				5F2794A3153CB7EC00569AD5 /* PdfDataType.cpp */,
+				5F2794A4153CB7EC00569AD5 /* PdfDate.cpp */,
+				5F2794A5153CB7EC00569AD5 /* PdfDictionary.cpp */,
+				5F2794A6153CB7EC00569AD5 /* PdfEncoding.cpp */,
+				5F2794A7153CB7EC00569AD5 /* PdfEncodingFactory.cpp */,
+				5F2794A8153CB7EC00569AD5 /* PdfEncrypt.cpp */,
+				5F2794A9153CB7EC00569AD5 /* PdfError.cpp */,
+				5F2794AA153CB7EC00569AD5 /* PdfFileStream.cpp */,
+				5F2794AB153CB7EC00569AD5 /* PdfFilter.cpp */,
+				5F2794AC153CB7EC00569AD5 /* PdfFiltersPrivate.cpp */,
+				5F2794AD153CB7EC00569AD5 /* PdfImmediateWriter.cpp */,
+				5F2794AE153CB7EC00569AD5 /* PdfInputDevice.cpp */,
+				5F2794AF153CB7EC00569AD5 /* PdfInputStream.cpp */,
+				5F2794B0153CB7EC00569AD5 /* PdfLocale.cpp */,
+				5F2794B1153CB7EC00569AD5 /* PdfMemoryManagement.cpp */,
+				5F2794B2153CB7EC00569AD5 /* PdfMemStream.cpp */,
+				5F2794B3153CB7EC00569AD5 /* PdfName.cpp */,
+				5F2794B4153CB7EC00569AD5 /* PdfObject.cpp */,
+				5F2794B5153CB7EC00569AD5 /* PdfObjectStreamParserObject.cpp */,
+				5F2794B6153CB7EC00569AD5 /* PdfOutputDevice.cpp */,
+				5F2794B7153CB7EC00569AD5 /* PdfOutputStream.cpp */,
+				5F2794B8153CB7EC00569AD5 /* PdfParser.cpp */,
+				5F2794B9153CB7EC00569AD5 /* PdfParserObject.cpp */,
+				5F2794BA153CB7EC00569AD5 /* PdfRect.cpp */,
+				5F2794BB153CB7EC00569AD5 /* PdfRefCountedBuffer.cpp */,
+				5F2794BC153CB7EC00569AD5 /* PdfRefCountedInputDevice.cpp */,
+				5F2794BD153CB7EC00569AD5 /* PdfReference.cpp */,
+				5F2794BE153CB7EC00569AD5 /* PdfRijndael.cpp */,
+				5F2794BF153CB7EC00569AD5 /* PdfStream.cpp */,
+				5F2794C0153CB7EC00569AD5 /* PdfString.cpp */,
+				5F2794C1153CB7EC00569AD5 /* PdfTokenizer.cpp */,
+				5F2794C2153CB7EC00569AD5 /* PdfVariant.cpp */,
+				5F2794C3153CB7EC00569AD5 /* PdfVecObjects.cpp */,
+				5F2794C4153CB7EC00569AD5 /* PdfWriter.cpp */,
+				5F2794C5153CB7EC00569AD5 /* PdfXRef.cpp */,
+				5F2794C6153CB7EC00569AD5 /* PdfXRefStream.cpp */,
+				5F2794C7153CB7EC00569AD5 /* PdfXRefStreamParserObject.cpp */,
+			);
+			name = base;
+			sourceTree = "<group>";
+		};
+		5F261C03153DC2BA00FC2A6D /* doc */ = {
+			isa = PBXGroup;
+			children = (
+				5F261C04153DC30900FC2A6D /* PdfAcroForm.cpp */,
+				5F261C05153DC30900FC2A6D /* PdfAction.cpp */,
+				5F261C06153DC30900FC2A6D /* PdfAnnotation.cpp */,
+				CA8B706E153E0F5600D13990 /* PdfCMapEncoding.cpp */,
+				5F261C07153DC30900FC2A6D /* PdfContents.cpp */,
+				5F261C08153DC30900FC2A6D /* PdfDestination.cpp */,
+				5F261C09153DC30900FC2A6D /* PdfDifferenceEncoding.cpp */,
+				5F261C0A153DC30900FC2A6D /* PdfDocument.cpp */,
+				5F261C0B153DC30900FC2A6D /* PdfElement.cpp */,
+				5F261C0C153DC30900FC2A6D /* PdfEncodingObjectFactory.cpp */,
+				5F261C0D153DC30900FC2A6D /* PdfExtGState.cpp */,
+				5F261C0E153DC30900FC2A6D /* PdfField.cpp */,
+				5F261C0F153DC30900FC2A6D /* PdfFileSpec.cpp */,
+				5F261C10153DC30A00FC2A6D /* PdfFont.cpp */,
+				5F261C11153DC30A00FC2A6D /* PdfFontCache.cpp */,
+				CA8B7067153E08BB00D13990 /* PdfFontCID.cpp */,
+				CA8B706F153E0F5600D13990 /* PdfFontConfigWrapper.cpp */,
+				5F261C13153DC30A00FC2A6D /* PdfFontFactory.cpp */,
+				5F261C14153DC30A00FC2A6D /* PdfFontMetrics.cpp */,
+				CA8B7069153E095C00D13990 /* PdfFontMetricsBase14.cpp */,
+				5F261C16153DC30A00FC2A6D /* PdfFontMetricsFreetype.cpp */,
+				5F261C17153DC30A00FC2A6D /* PdfFontMetricsObject.cpp */,
+				5F261C18153DC30A00FC2A6D /* PdfFontSimple.cpp */,
+				5F261C19153DC30A00FC2A6D /* PdfFontTrueType.cpp */,
+				5F261C1A153DC30A00FC2A6D /* PdfFontTTFSubset.cpp */,
+				5F261C1B153DC30A00FC2A6D /* PdfFontType1.cpp */,
+				5F261C1C153DC30A00FC2A6D /* PdfFontType1Base14.cpp */,
+				5F261C1D153DC30A00FC2A6D /* PdfFunction.cpp */,
+				5F261C1E153DC30A00FC2A6D /* PdfHintStream.cpp */,
+				5F261C1F153DC30A00FC2A6D /* PdfIdentityEncoding.cpp */,
+				5F261C20153DC30A00FC2A6D /* PdfImage.cpp */,
+				5F261C21153DC30A00FC2A6D /* PdfInfo.cpp */,
+				5F261C22153DC30A00FC2A6D /* PdfMemDocument.cpp */,
+				5F261C23153DC30A00FC2A6D /* PdfNamesTree.cpp */,
+				5F261C24153DC30A00FC2A6D /* PdfOutlines.cpp */,
+				5F261C25153DC30A00FC2A6D /* PdfPage.cpp */,
+				5F261C26153DC30A00FC2A6D /* PdfPagesTree.cpp */,
+				5F261C27153DC30A00FC2A6D /* PdfPagesTreeCache.cpp */,
+				5F261C28153DC30A00FC2A6D /* PdfPainter.cpp */,
+				5F261C29153DC30A00FC2A6D /* PdfPainterMM.cpp */,
+				5F261C2A153DC30A00FC2A6D /* PdfShadingPattern.cpp */,
+				5F261C2B153DC30A00FC2A6D /* PdfSignatureField.cpp */,
+				5F261C2C153DC30A00FC2A6D /* PdfSignOutputDevice.cpp */,
+				5F261C2D153DC30A00FC2A6D /* PdfStreamedDocument.cpp */,
+				5F261C2E153DC30A00FC2A6D /* PdfTable.cpp */,
+				5F261C30153DC30A00FC2A6D /* PdfXObject.cpp */,
+			);
+			name = doc;
+			sourceTree = "<group>";
+		};
+		5F279480153CB73600569AD5 = {
+			isa = PBXGroup;
+			children = (
+				5F279490153CB73600569AD5 /* podofo */,
+				5F27948D153CB73600569AD5 /* Frameworks */,
+				5F27948C153CB73600569AD5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5F27948C153CB73600569AD5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5F27948B153CB73600569AD5 /* libpodofo.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5F27948D153CB73600569AD5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F27948E153CB73600569AD5 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5F279490153CB73600569AD5 /* podofo */ = {
+			isa = PBXGroup;
+			children = (
+				5F261C5E153DC3C800FC2A6D /* PdfDefines.h */,
+				5F261C03153DC2BA00FC2A6D /* doc */,
+				5F261C01153DC23200FC2A6D /* base */,
+				5F279491153CB73600569AD5 /* Supporting Files */,
+				5F2794F4153CB88C00569AD5 /* podofo_config.h */,
+			);
+			path = podofo;
+			sourceTree = "<group>";
+		};
+		5F279491153CB73600569AD5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5F279492153CB73600569AD5 /* podofo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5F279489153CB73600569AD5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F2794F3153CB85B00569AD5 /* PdfVersion.h in Headers */,
+				5F2794F6153CB92B00569AD5 /* PdfDefinesPrivate.h in Headers */,
+				5F261C5F153DC3C800FC2A6D /* PdfDefines.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5F27948A153CB73600569AD5 /* podofo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F279498153CB73600569AD5 /* Build configuration list for PBXNativeTarget "podofo" */;
+			buildPhases = (
+				5F279487153CB73600569AD5 /* Sources */,
+				5F279488153CB73600569AD5 /* Frameworks */,
+				5F279489153CB73600569AD5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = podofo;
+			productName = podofo;
+			productReference = 5F27948B153CB73600569AD5 /* libpodofo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5F279482153CB73600569AD5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Mekentosj BV";
+			};
+			buildConfigurationList = 5F279485153CB73600569AD5 /* Build configuration list for PBXProject "podofo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5F279480153CB73600569AD5;
+			productRefGroup = 5F27948C153CB73600569AD5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5F27948A153CB73600569AD5 /* podofo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5F279487153CB73600569AD5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F2794C8153CB7EC00569AD5 /* PdfArray.cpp in Sources */,
+				5F2794C9153CB7EC00569AD5 /* PdfCanvas.cpp in Sources */,
+				5F2794CA153CB7EC00569AD5 /* PdfColor.cpp in Sources */,
+				5F2794CB153CB7EC00569AD5 /* PdfContentsTokenizer.cpp in Sources */,
+				5F2794CC153CB7EC00569AD5 /* PdfData.cpp in Sources */,
+				5F2794CD153CB7ED00569AD5 /* PdfDataType.cpp in Sources */,
+				5F2794CE153CB7ED00569AD5 /* PdfDate.cpp in Sources */,
+				5F2794CF153CB7ED00569AD5 /* PdfDictionary.cpp in Sources */,
+				5F2794D0153CB7ED00569AD5 /* PdfEncoding.cpp in Sources */,
+				5F2794D1153CB7ED00569AD5 /* PdfEncodingFactory.cpp in Sources */,
+				5F2794D2153CB7ED00569AD5 /* PdfEncrypt.cpp in Sources */,
+				5F2794D3153CB7ED00569AD5 /* PdfError.cpp in Sources */,
+				5F2794D4153CB7ED00569AD5 /* PdfFileStream.cpp in Sources */,
+				5F2794D5153CB7ED00569AD5 /* PdfFilter.cpp in Sources */,
+				5F2794D6153CB7ED00569AD5 /* PdfFiltersPrivate.cpp in Sources */,
+				5F2794D7153CB7ED00569AD5 /* PdfImmediateWriter.cpp in Sources */,
+				5F2794D8153CB7ED00569AD5 /* PdfInputDevice.cpp in Sources */,
+				5F2794D9153CB7ED00569AD5 /* PdfInputStream.cpp in Sources */,
+				5F2794DA153CB7ED00569AD5 /* PdfLocale.cpp in Sources */,
+				5F2794DB153CB7ED00569AD5 /* PdfMemoryManagement.cpp in Sources */,
+				5F2794DC153CB7ED00569AD5 /* PdfMemStream.cpp in Sources */,
+				5F2794DD153CB7ED00569AD5 /* PdfName.cpp in Sources */,
+				5F2794DE153CB7ED00569AD5 /* PdfObject.cpp in Sources */,
+				5F2794DF153CB7ED00569AD5 /* PdfObjectStreamParserObject.cpp in Sources */,
+				5F2794E0153CB7ED00569AD5 /* PdfOutputDevice.cpp in Sources */,
+				5F2794E1153CB7ED00569AD5 /* PdfOutputStream.cpp in Sources */,
+				5F2794E2153CB7ED00569AD5 /* PdfParser.cpp in Sources */,
+				5F2794E3153CB7ED00569AD5 /* PdfParserObject.cpp in Sources */,
+				5F2794E4153CB7ED00569AD5 /* PdfRect.cpp in Sources */,
+				5F2794E5153CB7ED00569AD5 /* PdfRefCountedBuffer.cpp in Sources */,
+				5F2794E6153CB7ED00569AD5 /* PdfRefCountedInputDevice.cpp in Sources */,
+				5F2794E7153CB7ED00569AD5 /* PdfReference.cpp in Sources */,
+				5F2794E8153CB7ED00569AD5 /* PdfRijndael.cpp in Sources */,
+				5F2794E9153CB7ED00569AD5 /* PdfStream.cpp in Sources */,
+				5F2794EA153CB7ED00569AD5 /* PdfString.cpp in Sources */,
+				5F2794EB153CB7ED00569AD5 /* PdfTokenizer.cpp in Sources */,
+				5F2794EC153CB7ED00569AD5 /* PdfVariant.cpp in Sources */,
+				5F2794ED153CB7ED00569AD5 /* PdfVecObjects.cpp in Sources */,
+				5F2794EE153CB7ED00569AD5 /* PdfWriter.cpp in Sources */,
+				5F2794EF153CB7ED00569AD5 /* PdfXRef.cpp in Sources */,
+				5F2794F0153CB7ED00569AD5 /* PdfXRefStream.cpp in Sources */,
+				5F2794F1153CB7ED00569AD5 /* PdfXRefStreamParserObject.cpp in Sources */,
+				5F261C31153DC30A00FC2A6D /* PdfAcroForm.cpp in Sources */,
+				5F261C32153DC30A00FC2A6D /* PdfAction.cpp in Sources */,
+				5F261C33153DC30A00FC2A6D /* PdfAnnotation.cpp in Sources */,
+				5F261C34153DC30A00FC2A6D /* PdfContents.cpp in Sources */,
+				5F261C35153DC30A00FC2A6D /* PdfDestination.cpp in Sources */,
+				5F261C36153DC30A00FC2A6D /* PdfDifferenceEncoding.cpp in Sources */,
+				5F261C37153DC30A00FC2A6D /* PdfDocument.cpp in Sources */,
+				5F261C38153DC30A00FC2A6D /* PdfElement.cpp in Sources */,
+				5F261C39153DC30A00FC2A6D /* PdfEncodingObjectFactory.cpp in Sources */,
+				5F261C3A153DC30A00FC2A6D /* PdfExtGState.cpp in Sources */,
+				5F261C3B153DC30A00FC2A6D /* PdfField.cpp in Sources */,
+				5F261C3C153DC30A00FC2A6D /* PdfFileSpec.cpp in Sources */,
+				5F261C3D153DC30A00FC2A6D /* PdfFont.cpp in Sources */,
+				5F261C3E153DC30A00FC2A6D /* PdfFontCache.cpp in Sources */,
+				5F261C40153DC30A00FC2A6D /* PdfFontFactory.cpp in Sources */,
+				5F261C41153DC30A00FC2A6D /* PdfFontMetrics.cpp in Sources */,
+				5F261C43153DC30A00FC2A6D /* PdfFontMetricsFreetype.cpp in Sources */,
+				5F261C44153DC30A00FC2A6D /* PdfFontMetricsObject.cpp in Sources */,
+				5F261C45153DC30A00FC2A6D /* PdfFontSimple.cpp in Sources */,
+				5F261C46153DC30A00FC2A6D /* PdfFontTrueType.cpp in Sources */,
+				5F261C47153DC30A00FC2A6D /* PdfFontTTFSubset.cpp in Sources */,
+				5F261C48153DC30A00FC2A6D /* PdfFontType1.cpp in Sources */,
+				5F261C49153DC30A00FC2A6D /* PdfFontType1Base14.cpp in Sources */,
+				5F261C4A153DC30A00FC2A6D /* PdfFunction.cpp in Sources */,
+				5F261C4B153DC30A00FC2A6D /* PdfHintStream.cpp in Sources */,
+				5F261C4C153DC30A00FC2A6D /* PdfIdentityEncoding.cpp in Sources */,
+				5F261C4D153DC30A00FC2A6D /* PdfImage.cpp in Sources */,
+				5F261C4E153DC30A00FC2A6D /* PdfInfo.cpp in Sources */,
+				5F261C4F153DC30A00FC2A6D /* PdfMemDocument.cpp in Sources */,
+				5F261C50153DC30A00FC2A6D /* PdfNamesTree.cpp in Sources */,
+				5F261C51153DC30A00FC2A6D /* PdfOutlines.cpp in Sources */,
+				5F261C52153DC30A00FC2A6D /* PdfPage.cpp in Sources */,
+				5F261C53153DC30A00FC2A6D /* PdfPagesTree.cpp in Sources */,
+				5F261C54153DC30A00FC2A6D /* PdfPagesTreeCache.cpp in Sources */,
+				5F261C55153DC30A00FC2A6D /* PdfPainter.cpp in Sources */,
+				5F261C56153DC30A00FC2A6D /* PdfPainterMM.cpp in Sources */,
+				5F261C57153DC30A00FC2A6D /* PdfShadingPattern.cpp in Sources */,
+				5F261C58153DC30A00FC2A6D /* PdfSignatureField.cpp in Sources */,
+				5F261C59153DC30A00FC2A6D /* PdfSignOutputDevice.cpp in Sources */,
+				5F261C5A153DC30A00FC2A6D /* PdfStreamedDocument.cpp in Sources */,
+				5F261C5B153DC30A00FC2A6D /* PdfTable.cpp in Sources */,
+				5F261C5D153DC30A00FC2A6D /* PdfXObject.cpp in Sources */,
+				CA8B7068153E08BB00D13990 /* PdfFontCID.cpp in Sources */,
+				CA8B706A153E095C00D13990 /* PdfFontMetricsBase14.cpp in Sources */,
+				CA8B7070153E0F5600D13990 /* PdfCMapEncoding.cpp in Sources */,
+				CA8B7071153E0F5600D13990 /* PdfFontConfigWrapper.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5F279496153CB73600569AD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"ARCHS[sdk=iphoneos*]" = (
+					armv6,
+					armv7,
+				);
+				"ARCHS[sdk=iphonesimulator*]" = i386;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5F279497153CB73600569AD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"ARCHS[sdk=iphoneos*]" = (
+					armv6,
+					armv7,
+				);
+				"ARCHS[sdk=iphonesimulator*]" = i386;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5F279499153CB73600569AD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/podofo.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "podofo/podofo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					BUILDING_PODOFO,
+					PODOFO_HAVE_FREETYPE,
+				);
+				GCC_THUMB_SUPPORT = NO;
+				HEADER_SEARCH_PATHS = (
+					../../../Extras/podofo,
+					../../../Extras/podofo/podofo,
+					../../freetype2/include,
+					/usr/local/include,
+					/usr/local/include/freetype2,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Debug;
+		};
+		5F27949A153CB73600569AD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/podofo.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "podofo/podofo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					BUILDING_PODOFO,
+					PODOFO_HAVE_FREETYPE,
+				);
+				GCC_THUMB_SUPPORT = NO;
+				HEADER_SEARCH_PATHS = (
+					../../../Extras/podofo,
+					../../../Extras/podofo/podofo,
+					../../freetype2/include,
+					/usr/local/include,
+					/usr/local/include/freetype2,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5F279485153CB73600569AD5 /* Build configuration list for PBXProject "podofo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F279496153CB73600569AD5 /* Debug */,
+				5F279497153CB73600569AD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F279498153CB73600569AD5 /* Build configuration list for PBXNativeTarget "podofo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F279499153CB73600569AD5 /* Debug */,
+				5F27949A153CB73600569AD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5F279482153CB73600569AD5 /* Project object */;
+}

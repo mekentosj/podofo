@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'podofo' target in the 'podofo' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif

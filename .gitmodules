@@ -1,0 +1,3 @@
+[submodule "External/freetype"]
+	path = External/freetype
+	url = git@github.com:mekentosj/freetype-gyp
